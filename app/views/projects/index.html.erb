@@ -1,0 +1,13 @@
+<html>
+	<body>
+		<h1> Proyectos </h1>
+		<ul> 
+		<% @projects.each do |item| %> 
+			<li><%= item.name %> 
+		<% if item.description.present? %>
+			- <%= item.description %></li>
+			<%end%>
+		<%end%>
+		</ul>	
+	</body>
+</html>
