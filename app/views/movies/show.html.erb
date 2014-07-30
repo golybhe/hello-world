@@ -1,0 +1,16 @@
+<html>
+	<head></head>
+	<body>
+		<table border="2px">
+		
+			<tr><td><%= @films.title %></td></tr>
+			<tr><td><img src="<%= @films.poster %>" /></td></tr>
+			<tr><td><%= @films.plot %></td></tr>
+			<tr><td><%= @films.year %></td></tr>
+			
+			<!--El poster va a salir en blanco porque hay muchas sin poster, pero no está mal el código-->
+	
+						
+		</table>	
+	</body>
+</html>
