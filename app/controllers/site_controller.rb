@@ -1,6 +1,6 @@
 class SiteController < ApplicationController
 	def home
-		@films= Film.limit(5).order("year DESC")
+		@films= Film.limit(5).offset(6).order("id ASC")
 
 	end
 	
