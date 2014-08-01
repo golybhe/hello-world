@@ -1,0 +1,20 @@
+<html>
+	<head></head>
+	<body>
+		<table border="2px">
+		
+			<tr><td><%= @films.title %></td><td><a href="<%=@films.id%>/edit">Editar</a></td></tr>
+			<tr><td><img src="<%= @films.poster %>" /></td></tr>
+			<tr><td><%= @films.plot %></td></tr>
+			<tr><td><%= @films.year %></td></tr>
+			
+			<a href="/movies/<%=@films.id%>/review/new"> Make a review! </a>
+			<!--El poster va a salir en blanco porque hay muchas sin poster, pero no está mal el código-->
+		
+			<a href="/reviews/<%=@films.id%>/"> See Reviews </a>	
+		
+
+						
+		</table>	
+	</body>
+</html>

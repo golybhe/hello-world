@@ -5,7 +5,7 @@
 		<table border="2px">
 			
 		<% @films.each do |item| %> 
-			<tr><td><%= item.title %></td></tr>
+			<tr><td><%= item.title %></td></tr> 
 			<tr><td><img src="<%= item.poster %>" /></td></tr>
 			<!--El poster va a salir en blanco porque hay muchas sin poster, pero no está mal el código-->
 		<%end%>

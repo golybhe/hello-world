@@ -1,13 +1,8 @@
 class Film < ActiveRecord::Base
-	has_many :entries
-	def show  
-		@film= Film.limit(5).find_by(title)
-		unless film.present?
-			render "error", layout: "notfound"
-	
-		end	
-		film 
-	end
+	has_and_belongs_to_many :cast_members
+	has_many :reviews
+	validates :poster, presence: true
+	validates :title, uniqueness: true
 	
 end
 

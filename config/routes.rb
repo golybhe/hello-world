@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  get '/' => 'site#home'
-  get "/show/:id/" => "movies#show"
+ get '/start' => 'site#start'
+  get '/' => 'site#home'  
+  get "/movies/:id/" => "movies#show_one_film"
+  get "/movies/:id/review/new" => "review#new"
+  post "/movies/:id/reviews" => "review#create", as: 'film_reviews'
+  get '/reviews/:id/' => 'review#show'
+  get '/movies/:id/edit' => 'site#contact'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
